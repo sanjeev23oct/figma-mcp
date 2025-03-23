@@ -56,24 +56,63 @@ A Model Context Protocol (MCP) server that provides a bridge between Figma desig
    # Add your Figma access token to .env
    ```
 
-## 💻 Usage
+## 🎯 Cursor IDE Setup
 
-1. Add the server to your MCP settings:
+1. Create the `.cursor/mcp.json` file in your project root:
+   ```bash
+   mkdir -p .cursor
+   touch .cursor/mcp.json
+   ```
+
+2. For Stdio-based server configuration:
    ```json
    {
-     "mcpServers": {
-       "figma": {
-         "command": "node",
-         "args": ["path/to/figma-mcp/build/index.js"],
-         "env": {
-           "FIGMA_ACCESS_TOKEN": "your-token-here"
+    "mcpServers": {
+      "figma": {
+        "command": "node",
+        "args": ["d:/<folder>>/figma-mcp/build/index.js"],
+        "env": {
+          "FIGMA_ACCESS_TOKEN": "your figma token"
+        },
+        "disabled": false,
+        "alwaysAllow": [],
+        "protocol": "stdio"
+      }
+    }
+  }
+   ```
+
+
+## 💻 Usage
+
+1. Build the server:
+    ```bash
+    npm run build
+    ```
+
+2. Configure MCP settings based on your IDE:
+
+   - For VS Code (global settings):
+     ```json
+     // In settings.json
+     {
+       "mcpServers": {
+         "figma": {
+           "command": "node",
+           "args": ["path/to/figma-mcp/build/index.js"],
+           "env": {
+             "FIGMA_ACCESS_TOKEN": "your-token-here"
+           }
          }
        }
      }
-   }
-   ```
+     ```
 
-2. Use the MCP tools in your application:
+   - For Cursor IDE:
+     Use the `.cursor/mcp.json` configuration as described in the "Cursor IDE Setup" section above.
+     This configuration will take precedence over VS Code settings when using Cursor IDE.
+
+3. Use the MCP tools in your application:
    ```typescript
    // Example: Fetch processed Figma content
    const result = await useMcpTool("figma", "get_file_content", {
