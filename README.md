@@ -1,4 +1,5 @@
 # Figma MCP Server
+[![smithery badge](https://smithery.ai/badge/@sanjeev23oct/figma-mcp)](https://smithery.ai/server/@sanjeev23oct/figma-mcp)
 
 A Model Context Protocol (MCP) server that provides a bridge between Figma designs and React implementations. This server enables pixel-perfect conversion of Figma designs into React applications by processing Figma file data and providing it in a React-friendly format.
 
@@ -39,6 +40,15 @@ A Model Context Protocol (MCP) server that provides a bridge between Figma desig
 
 ## 📦 Installation
 
+### Installing via Smithery
+
+To install Figma Design to React Converter for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@sanjeev23oct/figma-mcp):
+
+```bash
+npx -y @smithery/cli install @sanjeev23oct/figma-mcp --client claude
+```
+
+### Manual Installation
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/figma-mcp.git
