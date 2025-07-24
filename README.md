@@ -3,6 +3,10 @@
 
 A Model Context Protocol (MCP) server that provides a bridge between Figma designs and React implementations. This server enables pixel-perfect conversion of Figma designs into React applications by processing Figma file data and providing it in a React-friendly format.
 
+<a href="https://glama.ai/mcp/servers/@sanjeev23oct/figma-mcp">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@sanjeev23oct/figma-mcp/badge" alt="Figma Server MCP server" />
+</a>
+
 ## 🚀 Features
 
 - **Figma API Integration**: Direct connection to Figma's API for accessing design files
