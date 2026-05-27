@@ -158,4 +158,4 @@ Contributions welcome! Please read our contributing guidelines.
 - Model Context Protocol for the MCP specification
 
 ---
-Made with ❤️ by [Your Name]
+Check out my other project: https://github.com/sanjeev23oct/zap , light weight coding agent free from bloated system prompts built in rust with skill first approach.
